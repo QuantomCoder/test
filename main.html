@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Martian Sucker</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- Animate.css for animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <style>
+    /* Reset and basic styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(circle, #000 0%, #101010 100%);
+      color: #fff;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      line-height: 1.6;
+    }
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #111;
+      border-bottom: 2px solid #333;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #bbb;
+    }
+    section {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .story {
+      margin-top: 2rem;
+      text-align: justify;
+    }
+    .story h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .story p {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+    }
+    /* Mars Background Section with Parallax-like Zoom */
+    .mars-bg {
+      background: url('https://via.placeholder.com/1920x1080?text=Mars+Surface') no-repeat center center/cover;
+      min-height: 500px;
+      position: relative;
+      animation: zoomIn 15s infinite alternate;
+    }
+    @keyframes zoomIn {
+      from { transform: scale(1); }
+      to { transform: scale(1.1); }
+    }
+    /* Character Section with image */
+    .character {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .character img {
+      max-width: 400px;
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 0, 94, 0.6);
+    }
+    .character .bio {
+      max-width: 500px;
+      font-size: 1.1rem;
+    }
+    /* Call-to-Action Section */
+    .cta {
+      text-align: center;
+      padding: 2rem;
+      background: #222;
+      margin-top: 2rem;
+      border-top: 1px solid #444;
+    }
+    .cta h2 {
+      font-size: 2rem;
+    }
+    .cta p {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+    .cta button {
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      background: #ff005e;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .cta button:hover {
+      background: #e60052;
+    }
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #111;
+      border-top: 1px solid #333;
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+    /* Navigation Bar */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background: #000;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ff005e;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      .story h2 {
+        font-size: 1.8rem;
+      }
+      .story p {
+        font-size: 1rem;
+      }
+      .character {
+        flex-direction: column;
+      }
+      .character img {
+        max-width: 100%;
+        margin-bottom: 2rem;
+      }
+      .character .bio {
+        max-width: 100%;
+      }
+      .cta h2 {
+        font-size: 1.6rem;
+      }
+      .cta p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      header p {
+        font-size: 0.9rem;
+      }
+      .story h2 {
+        font-size: 1.5rem;
+      }
+      .story p {
+        font-size: 0.95rem;
+      }
+      .cta h2 {
+        font-size: 1.4rem;
+      }
+      .cta p {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="animate__animated animate__fadeInDown">
+    <a href="#home">Home</a>
+    <a href="#story">Story</a>
+    <a href="#character">Character</a>
+    <a href="#cta">Join</a>
+  </nav>
+
+  <!-- Header Section -->
+  <header id="home" class="animate__animated animate__fadeInDown">
+    <h1>The Martian Sucker</h1>
+    <p>A Journey of Cosmic Vengeance and Mystery</p>
+  </header>
+
+  <!-- Mars Background Section -->
+  <section class="mars-bg animate__animated animate__zoomIn">
+    <!-- The background image sets the tone for Mars -->
+  </section>
+
+  <!-- Story Section -->
+  <section id="story" class="story">
+    <h2 class="animate__animated animate__fadeInUp">The Epic Journey</h2>
+    <p class="animate__animated animate__fadeInUp animate__delay-1s">
+      It began on Earth—a seemingly ordinary man discovers that destiny has far grander plans. With a burning desire for adventure, he leaves Earth and sets course for Mars.
+    </p>
+    <p class="animate__animated animate__fadeInUp animate__delay-2s">
+      Upon landing on the red planet, he faces an invasion of hostile aliens. Armed only with a saw, his brilliant mind, and an extraordinary ability to mimic any adversary’s power, he wages a one-man war against the extraterrestrial threat.
+    </p>
+    <p class="animate__animated animate__fadeInUp animate__delay-3s">
+      Channeling powers beyond mortal ken, he absorbs the abilities of his foes—adapting and countering every assault. His relentless determination leads him to conquer each alien force one by one.
+    </p>
+    <p class="animate__animated animate__fadeInUp animate__delay-4s">
+      In an unforeseen twist, after annihilating the invaders, he unleashes a mysterious force that drains life from Mars itself. The legend foretells that if the market cap of The Martian Sucker coin surges to $2 million, Mars will be redeemed. Otherwise, the red planet’s end is sealed.
+    </p>
+  </section>
+
+  <!-- Character Section -->
+  <section id="character" class="character">
+    <img class="animate__animated animate__fadeInLeft"
+         src="https://via.placeholder.com/400x500?text=Hero"
+         alt="Hero Image" />
+    <div class="bio animate__animated animate__fadeInRight">
+      <h2>The Man of Mars</h2>
+      <p>
+        Not just a fighter, he is a visionary with powers that defy the ordinary. His mind, as sharp as the saw he wields, adapts to any challenge—mimicking alien abilities and using them to vanquish his foes. His legend is built on both brute strength and cerebral prowess.
+      </p>
+      <p>
+        His journey, marked by cosmic battles and unexpected twists, is a call to arms for those who believe that even in the void of space, destiny is written by the bold.
+      </p>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section id="cta" class="cta animate__animated animate__fadeInUp">
+    <h2>Join the Cosmic Revolution</h2>
+    <p>Invest in The Martian Sucker coin and help decide the fate of Mars. Will you be the force that saves the red planet, or will it succumb to oblivion?</p>
+    <button onclick="window.location.href='https://your-dex-or-invest-link.com'">Invest Now</button>
+  </section>
+
+  <!-- Footer -->
+  <footer class="animate__animated animate__fadeInUp">
+    <p>&copy; 2025 The Martian Sucker. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Optional JavaScript for interactive scroll animations -->
+  <script>
+    // When scrolling, trigger animations for elements entering the viewport
+    function revealOnScroll() {
+      const reveals = document.querySelectorAll('.animate__animated');
+      reveals.forEach((element) => {
+        const windowHeight = window.innerHeight;
+        const elementTop = element.getBoundingClientRect().top;
+        if (elementTop < windowHeight - 50) {
+          element.classList.add('animate__fadeIn');
+        }
+      });
+    }
+    window.addEventListener('scroll', revealOnScroll);
+  </script>
+
+</body>
+</html>
